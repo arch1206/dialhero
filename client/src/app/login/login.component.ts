@@ -29,7 +29,6 @@ export class LoginComponent implements OnInit {
   login()
   {
     this.service.login(this.loginForm.value, (msg) => {
-      console.log(msg)
       if (msg == "SUCCESS") {
         this.route.navigate(["list"]);
       } else {

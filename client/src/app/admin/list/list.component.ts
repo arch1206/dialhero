@@ -29,7 +29,6 @@ export class ListComponent implements OnInit {
   actionTable(data)
   {
     this.service.delete("deleteHero",data.data,(a)=>{
-      console.log(a)
       return
     })
   }

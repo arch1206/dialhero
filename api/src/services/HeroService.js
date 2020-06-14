@@ -58,7 +58,8 @@ module.exports = {
     },
     insertHero: async function (heroObj) {
         let response = { msg: "FAILURE", data: null };
-        const { name } = heroObj;
+        var { name } = heroObj;
+        name = name.toUpperCase();
         var letters = /^[A-Za-z]+$/;
         if (name.match(letters)) {
             const code = await this.codeGenerator(name);
@@ -89,7 +90,7 @@ module.exports = {
     },
     codeGenerator: async function (name) {
         var code = '';
-        name = name.toUpperCase();
+       
         for (var e of name) {
             code = code.concat(letterNumberJson[e])
         }

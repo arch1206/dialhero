@@ -33,11 +33,11 @@ export class CreateComponent {
     {
       this.service.postData("heros",this.heroForm.value, (msg) => {
         if (msg == "SUCCESS") {
-          console.log(1)
           this.route.navigate(["/list"]);
         } else {
           this.error = msg;
           this.heroForm.reset();
+          this.route.navigate(["/list"]);
         }
       });
     }

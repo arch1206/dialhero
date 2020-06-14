@@ -42,7 +42,6 @@ export class GlobleService{
       this.http
         .post(this.apiUrl + "login", data, { headers: headers })
         .subscribe((a) => {
-          console.log("api",a)
           if (a["msg"] == "SUCCESS") {
             localStorage.setItem("userid", a["data"]["uid"]);
             this.token = a["data"]["token"];
@@ -81,7 +80,7 @@ export class GlobleService{
     }
     postData(path,data,callback)
     {
-      this.http.post(this.apiUrl+path,data).subscribe(a=>{
+      this.http.post(this.apiUrl+path,data, { headers: this.headers }).subscribe(a=>{
         callback(a['msg'])
       })
     }
@@ -92,7 +91,7 @@ export class GlobleService{
     }
     delete(path,data,callback)
     {
-      this.http.post(this.apiUrl+path,data).subscribe(a=>{
+      this.http.post(this.apiUrl+path,data, { headers: this.headers }).subscribe(a=>{
        callback(a['msg'])
       })
     }
