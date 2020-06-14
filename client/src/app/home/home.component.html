@@ -1,0 +1,54 @@
+
+<div class="container">
+    <div id="output">{{number}}</div>
+    <div class="row">
+        <div class="digit" id="one" (click)="append(1)">1
+            <div class="sub">@.?</div>
+        </div>
+
+        <div class="digit" id="two" (click)="append(2)">2
+            <div class="sub">ABC</div>
+        </div>
+        <div class="digit" id="three" (click)="append(3)">3
+            <div class="sub">DEF</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="digit" id="four" (click)="append(4)">4
+            <div class="sub">GHI</div>
+        </div>
+        <div class="digit" id="five" (click)="append(5)">5
+            <div class="sub">JKL</div>
+        </div>
+        <div class="digit" (click)="append(6)">6
+            <div class="sub">MNO</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="digit" (click)="append(7)">7
+            <div class="sub">PQRS</div>
+        </div>
+        <div class="digit" (click)="append(8)">8
+            <div class="sub">TUV</div>
+        </div>
+        <div class="digit" (click)="append(9)">9
+            <div class="sub">WXYZ</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="digit" (click)="call()">*
+            <div class="sub">send</div>
+        </div>
+        <div class="digit" (click)="append(0)">0
+            <div class="sub">Zero</div>
+        </div>
+        <div class="digit" (click)="append(' ')">#
+            <div class="sub">space</div>
+        </div>
+    </div>
+    <div class="botrow">
+        <!-- <i class="fa fa-star-o dig" aria-hidden="true"></i> -->
+        <!-- <div id="call"><i class="fa fa-phone" aria-hidden="true"></i></div> -->
+        <i class="fa fa-long-arrow-left dig" aria-hidden="true" (click)="clear()"></i>
+    </div>
+</div>

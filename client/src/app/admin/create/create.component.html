@@ -1,0 +1,18 @@
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+      <h2 > Add SuperHero </h2>
+      <!-- <div *ngIf="error">
+          <h1>{{error}}</h1>
+      </div> -->
+      <!-- Icon -->
+      <div class="fadeIn first">
+      </div>
+
+      <form [formGroup]="heroForm" (ngSubmit)="save();">
+        <input type="text" class="fadeIn second" name="login" placeholder="Name" formControlName="name">
+        <input type="submit" class="fadeIn fourth" value="Log In">
+      </form>
+  
+    </div>
+</div>
